@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ${{ values.name }}
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized
+      
+logging:
+  level:
+    com.example: WARN
+    org.springframework: WARN
+    org.apache.catalina: ERROR

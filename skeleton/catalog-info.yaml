@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name }}
+  title: ${{ values.name | dump }}
+  description: Spring Boot service scaffolded by Backstage
+spec:
+  type: service
+  owner: group:dev-platform
+  lifecycle: experimental
